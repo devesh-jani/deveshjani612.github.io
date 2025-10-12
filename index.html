@@ -3,51 +3,59 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Devesh Jani | Portfolio</title>
-  <meta name="description" content="Devesh Jani — Embedded & computer architecture projects, experience, and contact." />
+  <title>Devesh Hiteshbhai Jani | Portfolio</title>
+  <meta name="description" content="Devesh Hiteshbhai Jani — Embedded systems, computer architecture, and hardware verification projects." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root { --bg:#0b0d10; --panel:#11141a; --text:#eaf1ff; --muted:#9fb0c5; --accent:#7c9cff; --accent-2:#5eead4; --ring:rgba(124,156,255,.35); --shadow:0 15px 40px rgba(0,0,0,.35) }
-    :root.light { --bg:#f7f9fc; --panel:#ffffff; --text:#0b1220; --muted:#54657d; --accent:#335cff; --accent-2:#0ea5e9; --ring:rgba(14,165,233,.25); --shadow:0 20px 50px rgba(16,24,40,.08) }
+    :root {
+      --bg:#0b0d10; --panel:#11141a; --text:#eaf1ff; --muted:#9fb0c5;
+      --accent:#7c9cff; --accent-2:#5eead4; --ring:rgba(124,156,255,.35);
+      --shadow:0 15px 40px rgba(0,0,0,.35);
+    }
+    :root.light {
+      --bg:#f7f9fc; --panel:#ffffff; --text:#0b1220; --muted:#54657d;
+      --accent:#335cff; --accent-2:#0ea5e9; --ring:rgba(14,165,233,.25);
+      --shadow:0 20px 50px rgba(16,24,40,.08);
+    }
     *{box-sizing:border-box}
     html,body{height:100%}
-    body{margin:0; font-family:"Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; background:var(--bg); color:var(--text); line-height:1.7; letter-spacing:.2px}
-    a{color:var(--accent); text-decoration:none}
+    body{margin:0;font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;background:var(--bg);color:var(--text);line-height:1.7;letter-spacing:.2px}
+    a{color:var(--accent);text-decoration:none}
     a:hover{text-decoration:underline}
-    .container{max-width:1000px; margin:0 auto; padding:28px 20px 80px}
-    .nav{display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:36px}
-    .brand{display:flex; align-items:center; gap:12px}
-    .brand .avatar{width:42px; height:42px; border-radius:50%; background:linear-gradient(135deg,var(--accent),var(--accent-2)); box-shadow:var(--shadow)}
-    .brand h1{font-size:20px; margin:0; font-weight:700}
-    .links{display:flex; gap:18px; flex-wrap:wrap}
-    .chip{background:var(--panel); color:var(--text); border:1px solid rgba(124,156,255,.15); padding:8px 12px; border-radius:999px}
-    .btn{display:inline-flex; align-items:center; gap:10px; background:linear-gradient(135deg, var(--accent), var(--accent-2)); color:#081018; border:none; padding:10px 14px; border-radius:12px; font-weight:700; box-shadow:var(--shadow); cursor:pointer}
+    .container{max-width:1000px;margin:0 auto;padding:28px 20px 80px}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:36px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand .avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent-2));box-shadow:var(--shadow)}
+    .brand h1{font-size:20px;margin:0;font-weight:700}
+    .links{display:flex;gap:18px;flex-wrap:wrap}
+    .chip{background:var(--panel);color:var(--text);border:1px solid rgba(124,156,255,.15);padding:8px 12px;border-radius:999px}
+    .btn{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#081018;border:none;padding:10px 14px;border-radius:12px;font-weight:700;box-shadow:var(--shadow);cursor:pointer}
     .btn:hover{filter:brightness(1.05)}
-    .ghost{background:transparent; border:1px solid rgba(124,156,255,.25); color:var(--text)}
-    .hero{display:grid; grid-template-columns:1.2fr .8fr; gap:24px; align-items:center; margin-bottom:32px}
-    .hero .card{background:var(--panel); border:1px solid rgba(124,156,255,.15); border-radius:20px; padding:26px; box-shadow:var(--shadow)}
-    .hero h2{font-size:clamp(24px,3vw,34px); margin:0 0 6px; font-weight:800}
-    .hero p.lead{color:var(--muted); margin-top:4px; font-size:16px}
+    .ghost{background:transparent;border:1px solid rgba(124,156,255,.25);color:var(--text)}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center;margin-bottom:32px}
+    .hero .card{background:var(--panel);border:1px solid rgba(124,156,255,.15);border-radius:20px;padding:26px;box-shadow:var(--shadow)}
+    .hero h2{font-size:clamp(24px,3vw,34px);margin:0 0 6px;font-weight:800}
+    .hero p.lead{color:var(--muted);margin-top:4px;font-size:16px}
     section{margin-top:36px}
-    section h3{font-size:18px; text-transform:uppercase; letter-spacing:1.5px; color:var(--muted); margin:0 0 14px}
-    .grid{display:grid; grid-template-columns:repeat(12,1fr); gap:16px}
-    .card{background:var(--panel); border:1px solid rgba(124,156,255,.15); border-radius:18px; padding:18px; box-shadow:var(--shadow)}
-    .card:hover{border-color:var(--ring)}
+    section h3{font-size:18px;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin:0 0 14px}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+    .card{background:var(--panel);border:1px solid rgba(124,156,255,.15);border-radius:18px;padding:18px;box-shadow:var(--shadow);transition:transform 0.25s ease}
+    .card:hover{transform:translateY(-6px)}
     .row{grid-column:span 12}
     .col6{grid-column:span 6}
     .col4{grid-column:span 4}
-    .item{display:flex; gap:14px; align-items:flex-start}
-    .item .dot{width:10px; height:10px; border-radius:999px; background:var(--accent); margin-top:10px}
-    .item h4{margin:4px 0 4px; font-size:16px}
-    .item .meta{color:var(--muted); font-size:13px}
-    .item p{margin:6px 0 0; color:var(--text)}
-    .tags{display:flex; gap:8px; flex-wrap:wrap; margin-top:10px}
-    .tag{font-size:12px; padding:6px 10px; border-radius:999px; background:rgba(124,156,255,.12); color:var(--text); border:1px solid rgba(124,156,255,.2)}
-    footer{margin-top:56px; color:var(--muted); font-size:14px; display:flex; justify-content:space-between; align-items:center; gap:10px}
-    .socials{display:flex; gap:12px; flex-wrap:wrap}
-    @media (max-width:860px){ .hero{grid-template-columns:1fr} .col6{grid-column:span 12} .col4{grid-column:span 12} }
+    .item{display:flex;gap:14px;align-items:flex-start}
+    .item .dot{width:10px;height:10px;border-radius:999px;background:var(--accent);margin-top:10px}
+    .item h4{margin:4px 0 4px;font-size:16px}
+    .item .meta{color:var(--muted);font-size:13px}
+    .item p{margin:6px 0 0;color:var(--text)}
+    .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    .tag{font-size:12px;padding:6px 10px;border-radius:999px;background:rgba(124,156,255,.12);color:var(--text);border:1px solid rgba(124,156,255,.2)}
+    footer{margin-top:56px;color:var(--muted);font-size:14px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+    .socials{display:flex;gap:12px;flex-wrap:wrap}
+    @media(max-width:860px){.hero{grid-template-columns:1fr}.col6{grid-column:span 12}.col4{grid-column:span 12}}
   </style>
 </head>
 <body>
@@ -55,10 +63,10 @@
     <header class="nav">
       <div class="brand">
         <div class="avatar" aria-hidden="true"></div>
-        <h1>Devesh Jani</h1>
+        <h1>Devesh Hiteshbhai Jani</h1>
       </div>
       <div class="links">
-        <a class="chip" href="#projects">Projects</a>
+        <a class="chip" href="#projects">Major Projects</a>
         <a class="chip" href="#experience">Experience</a>
         <a class="chip" href="#skills">Skills</a>
         <a class="chip" href="#contact">Contact</a>
@@ -69,9 +77,9 @@
     <!-- Hero -->
     <section class="hero">
       <div class="card">
-        <h2>Hi, I’m Devesh — I build fast, reliable systems.</h2>
-        <p class="lead">Embedded & computer-architecture engineer focused on OS internals, GPUs, and performance.</p>
-        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px">
+        <h2>Hi, I’m Devesh — I design and verify efficient hardware and software systems.</h2>
+        <p class="lead">M.S. Computer Engineering @ NC State | Embedded Systems, Computer Architecture & Verification</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
           <a class="btn" href="/ResumeDeveshJani.pdf" target="_blank" rel="noopener">Download Résumé</a>
           <a class="btn ghost" href="https://github.com/deveshjani612" target="_blank" rel="noopener">GitHub</a>
           <a class="btn ghost" href="https://www.linkedin.com/in/deveshjani" target="_blank" rel="noopener">LinkedIn</a>
@@ -80,134 +88,79 @@
       </div>
       <div class="card">
         <h3>Now</h3>
-        <p style="margin-top:8px">• M.S. Computer Engineering @ NC State (Raleigh, NC) — Advanced Comp Arch & OS.</p>
-        <p>• Building architecture & systems projects; open to internships & research collaborations.</p>
+        <p style="margin-top:8px">• M.S. Computer Engineering @ NC State — focusing on architecture, OS, and verification.</p>
+        <p>• Exploring hardware-software co-design, UVM, and GPU performance analysis.</p>
       </div>
     </section>
 
-    <!-- Projects -->
+    <!-- Major Projects -->
     <section id="projects">
-      <h3>Selected Projects</h3>
+      <h3>Major Projects</h3>
       <div class="grid">
-        <div class="card col6">
-          <div class="item">
-            <span class="dot"></span>
-            <div>
-              <h4>Demand‑Paged Virtual Memory in Xinu <span class="meta">· C, OS, Paging</span></h4>
-              <p>Implemented demand paging with private virtual heaps and page replacement (Second‑Chance, Aging); integrated page‑fault handlers, frame tables, and backing store — reducing TLB misses and handling faults efficiently.</p>
-              <div class="tags"><span class="tag">C</span><span class="tag">OS</span><span class="tag">Paging</span></div>
-            </div>
-          </div>
-        </div>
-        <div class="card col6">
-          <div class="item">
-            <span class="dot"></span>
-            <div>
-              <h4>Microarchitecture Reverse Engineering <span class="meta">· C, Perf, AMX</span></h4>
-              <p>Reverse‑engineered caches, TLBs, and branch predictors via timing channels on Intel servers; profiled AMX to compare CPU vs GPU trade‑offs and observed 2–5× effects from 4 KB vs 2 MB pages.</p>
-              <div class="tags"><span class="tag">Perf</span><span class="tag">Intel</span><span class="tag">AMX</span></div>
-            </div>
-          </div>
-        </div>
-        <div class="card col6">
-          <div class="item">
-            <span class="dot"></span>
-            <div>
-              <h4>RISC‑V Superscalar Pipeline Simulator <span class="meta">· C++ (Tomasulo)</span></h4>
-              <p>Out‑of‑order simulator issuing N instructions/cycle; explored IPC across widths and ROB/scheduler sizes using Tomasulo’s algorithm.</p>
-              <div class="tags"><span class="tag">C++</span><span class="tag">RISC‑V</span><span class="tag">Tomasulo</span></div>
-            </div>
-          </div>
-        </div>
-        <div class="card col6">
-          <div class="item">
-            <span class="dot"></span>
-            <div>
-              <h4>GPGPU‑Sim Instrumentation <span class="meta">· CUDA, C++</span></h4>
-              <p>Modified functional semantics and added counters to track branch divergence and memory patterns across GPU architectures.</p>
-              <div class="tags"><span class="tag">CUDA</span><span class="tag">GPU</span><span class="tag">Profiling</span></div>
-            </div>
-          </div>
-        </div>
+        <!-- Each project -->
+        <div class="card col6"><div class="item"><span class="dot"></span><div><h4>Design Verification of LC3 Microprocessor using UVMF <span class="meta">· SystemVerilog, UVM</span></h4><p>Developed a UVMF-based verification environment for LC3 microprocessor pipeline stages; created modular agents, monitors, and scoreboards for coverage-driven verification.</p><div class="tags"><span class="tag">SystemVerilog</span><span class="tag">UVM</span><span class="tag">Verification</span></div></div></div></div>
+
+        <div class="card col6"><div class="item"><span class="dot"></span><div><h4>Process Scheduling in Xinu OS <span class="meta">· C, OS</span></h4><p>Implemented starvation-avoiding schedulers (exponential and Linux 2.2-style epoch) in Xinu OS with kernel structure extensions for fairness and efficiency.</p><div class="tags"><span class="tag">C</span><span class="tag">OS</span><span class="tag">Scheduling</span></div></div></div></div>
+
+        <div class="card col6"><div class="item"><span class="dot"></span><div><h4>Dynamic Per-SM L1 Cache Bypassing in GPGPU-Sim <span class="meta">· C++, CUDA</span></h4><p>Implemented profile-based cache bypass strategies and replacement policy studies (FIFO/LRU) to improve IPC on GPU architectures.</p><div class="tags"><span class="tag">C++</span><span class="tag">CUDA</span><span class="tag">GPGPU-Sim</span></div></div></div></div>
+
+        <div class="card col6"><div class="item"><span class="dot"></span><div><h4>Functional Verification of I²C Multi-Bus Controller <span class="meta">· SystemVerilog</span></h4><p>Created a layered testbench with agents, predictors, and scoreboards; implemented random and directed tests to verify multi-bus I²C controller functionality.</p><div class="tags"><span class="tag">SystemVerilog</span><span class="tag">UVM</span><span class="tag">I2C</span></div></div></div></div>
+
+        <div class="card col6"><div class="item"><span class="dot"></span><div><h4>Microarchitecture Reverse Engineering & Side-Channel Analysis <span class="meta">· C</span></h4><p>Developed microbenchmarks to reverse engineer caches, predictors, and ROBs using timing channels; analyzed CPU security and performance implications.</p><div class="tags"><span class="tag">C</span><span class="tag">Performance</span><span class="tag">Security</span></div></div></div></div>
+
+        <div class="card col6"><div class="item"><span class="dot"></span><div><h4>RISC-V Superscalar Pipeline Simulator <span class="meta">· C++</span></h4><p>Simulated an out-of-order superscalar processor implementing Tomasulo’s algorithm; analyzed IPC scaling with varying ROB and scheduler sizes.</p><div class="tags"><span class="tag">C++</span><span class="tag">RISC-V</span><span class="tag">Architecture</span></div></div></div></div>
+
+        <div class="card col6"><div class="item"><span class="dot"></span><div><h4>Demand-Paged Virtual Memory Subsystem <span class="meta">· C</span></h4><p>Implemented paging in Xinu OS with custom mmap, unmap, and page replacement (Second-Chance, Aging) to reduce TLB misses and manage backing store.</p><div class="tags"><span class="tag">C</span><span class="tag">Paging</span><span class="tag">OS</span></div></div></div></div>
+
+        <div class="card col6"><div class="item"><span class="dot"></span><div><h4>Dynamic Branch Predictor <span class="meta">· C++</span></h4><p>Designed and simulated bimodal, gshare, and hybrid predictors using chooser tables; analyzed prediction accuracy across workloads.</p><div class="tags"><span class="tag">C++</span><span class="tag">Branch Prediction</span></div></div></div></div>
+
+        <div class="card col6"><div class="item"><span class="dot"></span><div><h4>Cache & Memory Hierarchy Simulator <span class="meta">· C++</span></h4><p>Developed L1/L2 cache simulator with WB/WA and LRU replacement; analyzed prefetcher designs and cache configuration impacts using SPEC benchmarks.</p><div class="tags"><span class="tag">C++</span><span class="tag">Cache</span><span class="tag">Simulation</span></div></div></div></div>
+
+        <div class="card col6"><div class="item"><span class="dot"></span><div><h4>Scaled Dot-Product Self-Attention in Transformer Models <span class="meta">· Verilog, ModelSim</span></h4><p>Implemented self-attention matrix operations in Verilog; designed, verified, and synthesized efficient modules achieving area optimization with low latency.</p><div class="tags"><span class="tag">Verilog</span><span class="tag">Digital Design</span><span class="tag">Transformer</span></div></div></div></div>
+
+        <div class="card col6"><div class="item"><span class="dot"></span><div><h4>Real-Time LED Control: Fault Tolerance & Synchronization <span class="meta">· Embedded C, RTOS</span></h4><p>Implemented FRDM-KL25Z-based LED synchronization and fault-tolerant control; added watchdog timers and signal validation for robust real-time operation.</p><div class="tags"><span class="tag">Embedded C</span><span class="tag">RTOS</span><span class="tag">Real-Time</span></div></div></div></div>
       </div>
     </section>
 
-    <!-- Experience -->
+    <!-- Experience & Skills stay the same -->
     <section id="experience">
       <h3>Experience</h3>
       <div class="grid">
-        <div class="card row">
-          <div class="item">
-            <span class="dot"></span>
-            <div>
-              <h4>SoC Design Intern — Western Semiconductor <span class="meta">· Tempe, AZ · May–Aug 2025</span></h4>
-              <p>Designed an RVV‑compliant Vector Processing Unit with multi‑lane VRF; led intern team on a SIMD GPGPU coprocessor integrated into a RISC‑V SoC via TLC; built a C++ testbench (dual‑read & conflict detection) with VCD verification.</p>
-              <div class="tags"><span class="tag">RISC‑V</span><span class="tag">RVV</span><span class="tag">C++</span></div>
-            </div>
-          </div>
-        </div>
-        <div class="card row">
-          <div class="item">
-            <span class="dot"></span>
-            <div>
-              <h4>Research Intern — ISRO <span class="meta">· Ahmedabad, IN · Dec 2023–May 2024</span></h4>
-              <p>Implemented Boxcar/MOVAVG filter firmware on FPGA with external SRAM and real‑time sync; validated FIR on ProASIC3 against MATLAB golden model within ±1 LSB; debugged embedded peripherals (ADC, GPIO, SPI, PWM).</p>
-              <div class="tags"><span class="tag">FPGA</span><span class="tag">Verilog</span><span class="tag">Lab</span></div>
-            </div>
-          </div>
-        </div>
+        <div class="card row"><div class="item"><span class="dot"></span><div><h4>SoC Design Intern — Western Semiconductor <span class="meta">· Tempe, AZ · May–Aug 2025</span></h4><p>Designed RVV-compliant Vector Processing Unit; led SIMD-based GPGPU coprocessor integration into RISC-V SoC via TLC interconnect; built C++ testbench for verification.</p></div></div></div>
+        <div class="card row"><div class="item"><span class="dot"></span><div><h4>Research Intern — ISRO <span class="meta">· Ahmedabad, IN · Dec 2023–May 2024</span></h4><p>Developed Boxcar filter firmware on FPGA with SRAM sync; validated FIR filter vs MATLAB golden model within ±1 LSB; debugged embedded firmware across peripherals.</p></div></div></div>
       </div>
     </section>
 
-    <!-- Skills -->
     <section id="skills">
       <h3>Skills</h3>
       <div class="grid">
-        <div class="card col4">
-          <h4 style="margin:6px 0 12px">Languages</h4>
-          <p class="meta">C, C++, Python, Rust, SystemVerilog, Verilog</p>
-        </div>
-        <div class="card col4">
-          <h4 style="margin:6px 0 12px">Tools</h4>
-          <p class="meta">CUDA, OpenCL, Docker, MPI, OpenMP, Vivado, GPGPU‑Sim</p>
-        </div>
-        <div class="card col4">
-          <h4 style="margin:6px 0 12px">Protocols</h4>
-          <p class="meta">I²C, SPI, UART, CAN, Ethernet</p>
-        </div>
+        <div class="card col4"><h4>Languages</h4><p class="meta">C, C++, Python, Rust, SystemVerilog, Verilog</p></div>
+        <div class="card col4"><h4>Tools</h4><p class="meta">CUDA, OpenCL, Docker, MPI, OpenMP, Vivado, GPGPU‑Sim</p></div>
+        <div class="card col4"><h4>Protocols</h4><p class="meta">I²C, SPI, UART, CAN, Ethernet</p></div>
       </div>
     </section>
 
-    <!-- Contact -->
     <section id="contact">
       <h3>Contact</h3>
       <div class="card">
-        <p>Based in Raleigh, NC. Email <a href="mailto:dhjani2@ncsu.edu">dhjani2@ncsu.edu</a> · <a href="https://github.com/deveshjani612" target="_blank" rel="noopener">GitHub</a> · <a href="https://www.linkedin.com/in/deveshjani" target="_blank" rel="noopener">LinkedIn</a>.</p>
+        <p>Based in Raleigh, NC. Email <a href="mailto:dhjani2@ncsu.edu">dhjani2@ncsu.edu</a> · <a href="https://github.com/deveshjani612" target="_blank">GitHub</a> · <a href="https://www.linkedin.com/in/deveshjani" target="_blank">LinkedIn</a>.</p>
       </div>
     </section>
 
     <footer>
-      <div class="socials">
-        <a href="https://github.com/deveshjani612" target="_blank" rel="noopener">GitHub</a>
-        <span>·</span>
-        <a href="https://www.linkedin.com/in/deveshjani" target="_blank" rel="noopener">LinkedIn</a>
-        <span>·</span>
-        <a href="mailto:dhjani2@ncsu.edu">Email</a>
-      </div>
-      <div class="meta">© <span id="year"></span> Devesh Jani</div>
+      <div class="socials"><a href="https://github.com/deveshjani612" target="_blank">GitHub</a><span>·</span><a href="https://www.linkedin.com/in/deveshjani" target="_blank">LinkedIn</a><span>·</span><a href="mailto:dhjani2@ncsu.edu">Email</a></div>
+      <div class="meta">© <span id="year"></span> Devesh Hiteshbhai Jani</div>
     </footer>
   </div>
-
   <script>
     const root=document.documentElement;
     const saved=localStorage.getItem('theme');
-    if(saved==='light') root.classList.add('light');
+    if(saved==='light')root.classList.add('light');
     document.getElementById('theme').addEventListener('click',()=>{
       root.classList.toggle('light');
-      localStorage.setItem('theme', root.classList.contains('light')?'light':'dark');
+      localStorage.setItem('theme',root.classList.contains('light')?'light':'dark');
     });
     document.getElementById('year').textContent=new Date().getFullYear();
   </script>
 </body>
 </html>
-
