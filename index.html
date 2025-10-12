@@ -4,90 +4,50 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Devesh Jani | Portfolio</title>
-  <meta name="description" content="Personal portfolio and resume site hosted on GitHub Pages." />
+  <meta name="description" content="Devesh Jani — Embedded & computer architecture projects, experience, and contact." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg: #0b0d10;
-      --panel: #11141a;
-      --text: #eaf1ff;
-      --muted: #9fb0c5;
-      --accent: #7c9cff;
-      --accent-2: #5eead4;
-      --ring: rgba(124,156,255,.35);
-      --shadow: 0 15px 40px rgba(0,0,0,.35);
-    }
-    :root.light {
-      --bg: #f7f9fc;
-      --panel: #ffffff;
-      --text: #0b1220;
-      --muted: #54657d;
-      --accent: #335cff;
-      --accent-2: #0ea5e9;
-      --ring: rgba(14,165,233,.25);
-      --shadow: 0 20px 50px rgba(16,24,40,.08);
-    }
-    * { box-sizing: border-box }
-    html,body { height:100% }
-    body {
-      margin:0; font-family:"Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      background: var(--bg); color: var(--text); line-height:1.7; letter-spacing:.2px;
-    }
-    a { color: var(--accent); text-decoration: none }
-    a:hover { text-decoration: underline }
-    .container { max-width: 1000px; margin: 0 auto; padding: 28px 20px 80px }
-
-    /* Header */
-    .nav {
-      display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom: 36px;
-    }
-    .brand { display:flex; align-items:center; gap:12px }
-    .brand .avatar { width:42px; height:42px; border-radius:50%; background: linear-gradient(135deg,var(--accent),var(--accent-2)); box-shadow: var(--shadow) }
-    .brand h1 { font-size: 20px; margin:0; font-weight: 700 }
-    .nav .links { display:flex; gap:18px; flex-wrap:wrap }
-    .chip { background: var(--panel); color: var(--text); border:1px solid rgba(124,156,255,.15); padding:8px 12px; border-radius: 999px }
-
-    .btn { display:inline-flex; align-items:center; gap:10px; background: linear-gradient(135deg, var(--accent), var(--accent-2)); color:#081018; border:none; padding:10px 14px; border-radius:12px; font-weight:700; box-shadow: var(--shadow); cursor:pointer }
-    .btn:hover { filter: brightness(1.05) }
-    .ghost { background: transparent; border:1px solid rgba(124,156,255,.25); color: var(--text) }
-
-    /* Hero */
-    .hero { display:grid; grid-template-columns: 1.2fr .8fr; gap:24px; align-items:center; margin-bottom: 32px }
-    .hero .card { background: var(--panel); border:1px solid rgba(124,156,255,.15); border-radius: 20px; padding: 26px; box-shadow: var(--shadow) }
-    .hero h2 { font-size: clamp(24px, 3vw, 34px); margin: 0 0 6px; font-weight: 800 }
-    .hero p.lead { color: var(--muted); margin-top: 4px; font-size: 16px }
-
-    /* Sections */
-    section { margin-top: 36px }
-    section h3 { font-size: 18px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--muted); margin: 0 0 14px }
-    .grid { display:grid; grid-template-columns: repeat(12, 1fr); gap: 16px }
-
-    .card { background: var(--panel); border:1px solid rgba(124,156,255,.15); border-radius: 18px; padding: 18px; box-shadow: var(--shadow) }
-    .card:hover { border-color: var(--ring) }
-    .row { grid-column: span 12 }
-    .col6 { grid-column: span 6 }
-    .col4 { grid-column: span 4 }
-
-    .item { display:flex; gap: 14px; align-items:flex-start }
-    .item .dot { width:10px; height:10px; border-radius:999px; background: var(--accent) ; margin-top: 10px }
-    .item h4 { margin: 4px 0 4px; font-size: 16px }
-    .item .meta { color: var(--muted); font-size: 13px }
-    .item p { margin: 6px 0 0; color: var(--text) }
-
-    .tags { display:flex; gap:8px; flex-wrap:wrap; margin-top: 10px }
-    .tag { font-size: 12px; padding: 6px 10px; border-radius: 999px; background: rgba(124,156,255,.12); color: var(--text); border: 1px solid rgba(124,156,255,.2) }
-
-    footer { margin-top: 56px; color: var(--muted); font-size: 14px; display:flex; justify-content:space-between; align-items:center; gap: 10px }
-    .socials { display:flex; gap: 12px; flex-wrap: wrap }
-
-    /* Responsive */
-    @media (max-width: 860px){
-      .hero { grid-template-columns: 1fr }
-      .col6 { grid-column: span 12 }
-      .col4 { grid-column: span 12 }
-    }
+    :root { --bg:#0b0d10; --panel:#11141a; --text:#eaf1ff; --muted:#9fb0c5; --accent:#7c9cff; --accent-2:#5eead4; --ring:rgba(124,156,255,.35); --shadow:0 15px 40px rgba(0,0,0,.35) }
+    :root.light { --bg:#f7f9fc; --panel:#ffffff; --text:#0b1220; --muted:#54657d; --accent:#335cff; --accent-2:#0ea5e9; --ring:rgba(14,165,233,.25); --shadow:0 20px 50px rgba(16,24,40,.08) }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0; font-family:"Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; background:var(--bg); color:var(--text); line-height:1.7; letter-spacing:.2px}
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1000px; margin:0 auto; padding:28px 20px 80px}
+    .nav{display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:36px}
+    .brand{display:flex; align-items:center; gap:12px}
+    .brand .avatar{width:42px; height:42px; border-radius:50%; background:linear-gradient(135deg,var(--accent),var(--accent-2)); box-shadow:var(--shadow)}
+    .brand h1{font-size:20px; margin:0; font-weight:700}
+    .links{display:flex; gap:18px; flex-wrap:wrap}
+    .chip{background:var(--panel); color:var(--text); border:1px solid rgba(124,156,255,.15); padding:8px 12px; border-radius:999px}
+    .btn{display:inline-flex; align-items:center; gap:10px; background:linear-gradient(135deg, var(--accent), var(--accent-2)); color:#081018; border:none; padding:10px 14px; border-radius:12px; font-weight:700; box-shadow:var(--shadow); cursor:pointer}
+    .btn:hover{filter:brightness(1.05)}
+    .ghost{background:transparent; border:1px solid rgba(124,156,255,.25); color:var(--text)}
+    .hero{display:grid; grid-template-columns:1.2fr .8fr; gap:24px; align-items:center; margin-bottom:32px}
+    .hero .card{background:var(--panel); border:1px solid rgba(124,156,255,.15); border-radius:20px; padding:26px; box-shadow:var(--shadow)}
+    .hero h2{font-size:clamp(24px,3vw,34px); margin:0 0 6px; font-weight:800}
+    .hero p.lead{color:var(--muted); margin-top:4px; font-size:16px}
+    section{margin-top:36px}
+    section h3{font-size:18px; text-transform:uppercase; letter-spacing:1.5px; color:var(--muted); margin:0 0 14px}
+    .grid{display:grid; grid-template-columns:repeat(12,1fr); gap:16px}
+    .card{background:var(--panel); border:1px solid rgba(124,156,255,.15); border-radius:18px; padding:18px; box-shadow:var(--shadow)}
+    .card:hover{border-color:var(--ring)}
+    .row{grid-column:span 12}
+    .col6{grid-column:span 6}
+    .col4{grid-column:span 4}
+    .item{display:flex; gap:14px; align-items:flex-start}
+    .item .dot{width:10px; height:10px; border-radius:999px; background:var(--accent); margin-top:10px}
+    .item h4{margin:4px 0 4px; font-size:16px}
+    .item .meta{color:var(--muted); font-size:13px}
+    .item p{margin:6px 0 0; color:var(--text)}
+    .tags{display:flex; gap:8px; flex-wrap:wrap; margin-top:10px}
+    .tag{font-size:12px; padding:6px 10px; border-radius:999px; background:rgba(124,156,255,.12); color:var(--text); border:1px solid rgba(124,156,255,.2)}
+    footer{margin-top:56px; color:var(--muted); font-size:14px; display:flex; justify-content:space-between; align-items:center; gap:10px}
+    .socials{display:flex; gap:12px; flex-wrap:wrap}
+    @media (max-width:860px){ .hero{grid-template-columns:1fr} .col6{grid-column:span 12} .col4{grid-column:span 12} }
   </style>
 </head>
 <body>
@@ -95,7 +55,7 @@
     <header class="nav">
       <div class="brand">
         <div class="avatar" aria-hidden="true"></div>
-        <h1><!-- TODO: Your Name --> </h1>
+        <h1>Devesh Jani</h1>
       </div>
       <div class="links">
         <a class="chip" href="#projects">Projects</a>
@@ -109,19 +69,19 @@
     <!-- Hero -->
     <section class="hero">
       <div class="card">
-        <h2>Hi, I’m <!-- TODO: Your Name --> — I build fast, reliable systems.</h2>
-        <p class="lead"><!-- TODO: One‑line pitch. Example: Embedded & GPU systems engineer focused on real‑time, compilers, and performance. --></p>
+        <h2>Hi, I’m Devesh — I build fast, reliable systems.</h2>
+        <p class="lead">Embedded & computer-architecture engineer focused on OS internals, GPUs, and performance.</p>
         <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px">
-          <a class="btn" href="<!-- TODO: Your Resume PDF path, e.g. /resume.pdf -->" target="_blank" rel="noopener">Download Résumé</a>
-          <a class="btn ghost" href="https://github.com/<!-- TODO: your-github-username -->" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn ghost" href="https://www.linkedin.com/in/<!-- TODO: your-linkedin-handle -->" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="btn ghost" href="mailto:<!-- TODO: your@email -->">Email</a>
+          <a class="btn" href="/ResumeDeveshJani.pdf" target="_blank" rel="noopener">Download Résumé</a>
+          <a class="btn ghost" href="https://github.com/deveshjani612" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/deveshjani" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn ghost" href="mailto:dhjani2@ncsu.edu">Email</a>
         </div>
       </div>
       <div class="card">
         <h3>Now</h3>
-        <p style="margin-top:8px">• <!-- TODO: What you’re working on right now (1–2 bullets). --></p>
-        <p>• <!-- TODO: Another short current focus. --></p>
+        <p style="margin-top:8px">• M.S. Computer Engineering @ NC State (Raleigh, NC) — Advanced Comp Arch & OS.</p>
+        <p>• Building architecture & systems projects; open to internships & research collaborations.</p>
       </div>
     </section>
 
@@ -133,12 +93,9 @@
           <div class="item">
             <span class="dot"></span>
             <div>
-              <h4><!-- TODO: Project 1 Title --> <span class="meta">· <!-- TODO: Tech stack --></span></h4>
-              <p><!-- TODO: 1–2 line impact‑focused summary. --></p>
-              <div class="tags">
-                <span class="tag">C++</span><span class="tag">Linux</span><span class="tag">Performance</span>
-              </div>
-              <p class="meta"><a href="<!-- TODO: GitHub link -->" target="_blank" rel="noopener">Source</a> · <a href="<!-- TODO: Demo link -->" target="_blank" rel="noopener">Demo</a></p>
+              <h4>Demand‑Paged Virtual Memory in Xinu <span class="meta">· C, OS, Paging</span></h4>
+              <p>Implemented demand paging with private virtual heaps and page replacement (Second‑Chance, Aging); integrated page‑fault handlers, frame tables, and backing store — reducing TLB misses and handling faults efficiently.</p>
+              <div class="tags"><span class="tag">C</span><span class="tag">OS</span><span class="tag">Paging</span></div>
             </div>
           </div>
         </div>
@@ -146,12 +103,9 @@
           <div class="item">
             <span class="dot"></span>
             <div>
-              <h4><!-- TODO: Project 2 Title --> <span class="meta">· <!-- TODO: Tech stack --></span></h4>
-              <p><!-- TODO: Summary. --></p>
-              <div class="tags">
-                <span class="tag">Embedded</span><span class="tag">RTOS</span><span class="tag">C</span>
-              </div>
-              <p class="meta"><a href="<!-- TODO: GitHub link -->">Source</a></p>
+              <h4>Microarchitecture Reverse Engineering <span class="meta">· C, Perf, AMX</span></h4>
+              <p>Reverse‑engineered caches, TLBs, and branch predictors via timing channels on Intel servers; profiled AMX to compare CPU vs GPU trade‑offs and observed 2–5× effects from 4 KB vs 2 MB pages.</p>
+              <div class="tags"><span class="tag">Perf</span><span class="tag">Intel</span><span class="tag">AMX</span></div>
             </div>
           </div>
         </div>
@@ -159,12 +113,19 @@
           <div class="item">
             <span class="dot"></span>
             <div>
-              <h4><!-- TODO: Project 3 Title --> <span class="meta">· <!-- TODO: Tech stack --></span></h4>
-              <p><!-- TODO: Summary. --></p>
-              <div class="tags">
-                <span class="tag">CUDA</span><span class="tag">GPU</span><span class="tag">Profiling</span>
-              </div>
-              <p class="meta"><a href="<!-- TODO: GitHub link -->">Source</a></p>
+              <h4>RISC‑V Superscalar Pipeline Simulator <span class="meta">· C++ (Tomasulo)</span></h4>
+              <p>Out‑of‑order simulator issuing N instructions/cycle; explored IPC across widths and ROB/scheduler sizes using Tomasulo’s algorithm.</p>
+              <div class="tags"><span class="tag">C++</span><span class="tag">RISC‑V</span><span class="tag">Tomasulo</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="card col6">
+          <div class="item">
+            <span class="dot"></span>
+            <div>
+              <h4>GPGPU‑Sim Instrumentation <span class="meta">· CUDA, C++</span></h4>
+              <p>Modified functional semantics and added counters to track branch divergence and memory patterns across GPU architectures.</p>
+              <div class="tags"><span class="tag">CUDA</span><span class="tag">GPU</span><span class="tag">Profiling</span></div>
             </div>
           </div>
         </div>
@@ -179,9 +140,9 @@
           <div class="item">
             <span class="dot"></span>
             <div>
-              <h4><!-- TODO: Role, Company --> <span class="meta">· <!-- TODO: Dates, Location --></span></h4>
-              <p><!-- TODO: Impact statement with measurable result. --></p>
-              <div class="tags"><span class="tag">C/C++</span> <span class="tag">Linux</span> <span class="tag">Perf</span></div>
+              <h4>SoC Design Intern — Western Semiconductor <span class="meta">· Tempe, AZ · May–Aug 2025</span></h4>
+              <p>Designed an RVV‑compliant Vector Processing Unit with multi‑lane VRF; led intern team on a SIMD GPGPU coprocessor integrated into a RISC‑V SoC via TLC; built a C++ testbench (dual‑read & conflict detection) with VCD verification.</p>
+              <div class="tags"><span class="tag">RISC‑V</span><span class="tag">RVV</span><span class="tag">C++</span></div>
             </div>
           </div>
         </div>
@@ -189,9 +150,9 @@
           <div class="item">
             <span class="dot"></span>
             <div>
-              <h4><!-- TODO: Role, Company --> <span class="meta">· <!-- TODO: Dates, Location --></span></h4>
-              <p><!-- TODO: Impact statement. --></p>
-              <div class="tags"><span class="tag">FPGA</span> <span class="tag">Verilog</span> <span class="tag">Lab</span></div>
+              <h4>Research Intern — ISRO <span class="meta">· Ahmedabad, IN · Dec 2023–May 2024</span></h4>
+              <p>Implemented Boxcar/MOVAVG filter firmware on FPGA with external SRAM and real‑time sync; validated FIR on ProASIC3 against MATLAB golden model within ±1 LSB; debugged embedded peripherals (ADC, GPIO, SPI, PWM).</p>
+              <div class="tags"><span class="tag">FPGA</span><span class="tag">Verilog</span><span class="tag">Lab</span></div>
             </div>
           </div>
         </div>
@@ -221,32 +182,32 @@
     <section id="contact">
       <h3>Contact</h3>
       <div class="card">
-        <p>Open to opportunities and collaborations. The quickest way to reach me is <a href="mailto:<!-- TODO: your@email -->">email</a>. You can also DM me on <a href="https://www.linkedin.com/in/<!-- TODO: your-linkedin-handle -->" target="_blank" rel="noopener">LinkedIn</a>.</p>
+        <p>Based in Raleigh, NC. Email <a href="mailto:dhjani2@ncsu.edu">dhjani2@ncsu.edu</a> · <a href="https://github.com/deveshjani612" target="_blank" rel="noopener">GitHub</a> · <a href="https://www.linkedin.com/in/deveshjani" target="_blank" rel="noopener">LinkedIn</a>.</p>
       </div>
     </section>
 
     <footer>
       <div class="socials">
-        <a href="https://github.com/<!-- TODO: your-github-username -->" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://github.com/deveshjani612" target="_blank" rel="noopener">GitHub</a>
         <span>·</span>
-        <a href="https://www.linkedin.com/in/<!-- TODO: your-linkedin-handle -->" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/deveshjani" target="_blank" rel="noopener">LinkedIn</a>
         <span>·</span>
-        <a href="mailto:<!-- TODO: your@email -->">Email</a>
+        <a href="mailto:dhjani2@ncsu.edu">Email</a>
       </div>
-      <div class="meta">© <span id="year"></span> <!-- TODO: Your Name --></div>
+      <div class="meta">© <span id="year"></span> Devesh Jani</div>
     </footer>
   </div>
 
   <script>
-    // Theme toggle (persists)
-    const root = document.documentElement;
-    const saved = localStorage.getItem('theme');
-    if (saved === 'light') root.classList.add('light');
-    document.getElementById('theme').addEventListener('click', () => {
+    const root=document.documentElement;
+    const saved=localStorage.getItem('theme');
+    if(saved==='light') root.classList.add('light');
+    document.getElementById('theme').addEventListener('click',()=>{
       root.classList.toggle('light');
-      localStorage.setItem('theme', root.classList.contains('light') ? 'light' : 'dark');
+      localStorage.setItem('theme', root.classList.contains('light')?'light':'dark');
     });
-    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('year').textContent=new Date().getFullYear();
   </script>
 </body>
 </html>
+
