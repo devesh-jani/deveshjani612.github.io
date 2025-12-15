@@ -25,8 +25,9 @@
     a{color:var(--accent);text-decoration:none}
     .container{max-width:1000px;margin:auto;padding:28px 20px 80px}
     .nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:36px}
+    .links{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;align-items:center}
     .chip{background:var(--panel);border:1px solid rgba(124,156,255,.15);padding:8px 12px;border-radius:999px}
-    .btn{padding:10px 14px;border-radius:12px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#081018}
+    .btn{padding:10px 14px;border-radius:12px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#081018;border:0}
     .ghost{background:transparent;border:1px solid rgba(124,156,255,.25);color:var(--text)}
     .card{background:var(--panel);border:1px solid rgba(124,156,255,.15);border-radius:18px;padding:18px;box-shadow:var(--shadow)}
     h3{text-transform:uppercase;font-size:18px;color:var(--muted);letter-spacing:1.4px;margin-bottom:14px}
@@ -37,6 +38,9 @@
     .item{display:flex;gap:14px}
     .dot{width:10px;height:10px;background:var(--accent);border-radius:50%;margin-top:10px}
     .tag{background:rgba(124,156,255,.12);border:1px solid rgba(124,156,255,.2);padding:6px 10px;border-radius:999px;font-size:12px}
+    .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    .meta{color:var(--muted);font-weight:600;font-size:13px}
+
     @media(max-width:860px){.col6,.col4{grid-column:span 12}}
   </style>
 </head>
@@ -45,14 +49,14 @@
     <header class="nav">
       <div style="display:flex;align-items:center;gap:12px">
         <div style="width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent-2));"></div>
-        <h1>Devesh Hiteshbhai Jani</h1>
+        <h1 style="margin:0">Devesh Hiteshbhai Jani</h1>
       </div>
       <div class="links">
         <a class="chip" href="#portfolio">Portfolio</a>
         <a class="chip" href="#research">Research</a>
         <a class="chip" href="#experience">Experience</a>
         <a class="chip" href="#skills">Skills</a>
-        <button id="theme" class="btn ghost">🌙</button>
+        <button id="theme" class="btn ghost" type="button">🌙</button>
       </div>
     </header>
 
@@ -61,9 +65,9 @@
       <h2>Hi, I’m Devesh — I design and verify efficient hardware and software systems.</h2>
       <p style="color:var(--muted)">I specialize in computer architecture, performance modelling, CPU/GPU design verification, and systems software/architecture.</p>
       <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:14px">
-        <a class="btn" href="ResumeDeveshJani.pdf" target="_blank">Download Résumé</a>
-        <a class="btn ghost" href="https://github.com/deveshjani612" target="_blank">GitHub</a>
-        <a class="btn ghost" href="https://www.linkedin.com/in/deveshjani" target="_blank">LinkedIn</a>
+        <a class="btn" href="ResumeDeveshJani.pdf" target="_blank" rel="noopener" download>Download Résumé</a>
+        <a class="btn ghost" href="https://github.com/deveshjani612" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/deveshjani" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </section>
 
@@ -75,14 +79,14 @@
         <!-- Architecture Projects -->
         <div class="card col6"><div class="item"><span class="dot"></span><div>
           <h4>Microarchitecture Reverse Engineering & Performance Analysis <span class="meta">· C</span></h4>
-          <p>Reverse engineered cache, BTB, TLB, and ROB behavior using timing‑based side‑channel microbenchmarks; analyzed performance differences across page sizes and AMX vs CPU/GPU execution.</p>
+          <p>Reverse engineered cache, BTB, TLB, and ROB behavior using timing-based side-channel microbenchmarks; analyzed performance differences across page sizes and AMX vs CPU/GPU execution.</p>
           <div class="tags"><span class="tag">Microarchitecture</span><span class="tag">Security</span></div>
         </div></div></div>
 
         <div class="card col6"><div class="item"><span class="dot"></span><div>
           <h4>Superscalar Pipeline Simulator <span class="meta">· C++</span></h4>
-          <p>Implemented an out‑of‑order superscalar processor using Tomasulo’s algorithm with ROB, reservation stations, register renaming, and speculative execution; characterized IPC across pipeline width, ROB depth, and RS size.</p>
-          <div class="tags"><span class="tag">RISC‑V</span><span class="tag">C++</span></div>
+          <p>Implemented an out-of-order superscalar processor using Tomasulo’s algorithm with ROB, reservation stations, register renaming, and speculative execution; characterized IPC across pipeline width, ROB depth, and RS size.</p>
+          <div class="tags"><span class="tag">RISC-V</span><span class="tag">C++</span></div>
         </div></div></div>
 
         <div class="card col6"><div class="item"><span class="dot"></span><div>
@@ -98,72 +102,75 @@
         </div></div></div>
 
         <div class="card col6"><div class="item"><span class="dot"></span><div>
-          <h4>GPGPU‑Sim Performance & Functional Analysis <span class="meta">· CUDA, C++</span></h4>
+          <h4>GPGPU-Sim Performance & Functional Analysis <span class="meta">· CUDA, C++</span></h4>
           <p>Modified functional simulator instruction semantics; instrumented divergence and memory access counters; analyzed GPU architectural behavior and bottlenecks.</p>
           <div class="tags"><span class="tag">CUDA</span><span class="tag">GPU</span></div>
         </div></div></div>
 
         <div class="card col6"><div class="item"><span class="dot"></span><div>
-          <h4>Demand‑Paged Virtual Memory in Xinu <span class="meta">· C</span></h4>
-          <p>Implemented xmmap/xmunmap, private virtual heaps, SC/Aging replacement, and page‑fault ISR handling; optimized TLB behavior and backing‑store mappings.</p>
+          <h4>Demand-Paged Virtual Memory in Xinu <span class="meta">· C</span></h4>
+          <p>Implemented xmmap/xmunmap, private virtual heaps, SC/Aging replacement, and page-fault ISR handling; optimized TLB behavior and backing-store mappings.</p>
           <div class="tags"><span class="tag">OS</span><span class="tag">Paging</span></div>
         </div></div></div>
 
         <div class="card col6"><div class="item"><span class="dot"></span><div>
           <h4>Process Scheduling in Xinu <span class="meta">· C</span></h4>
-          <p>Implemented starvation‑free exponential scheduler and Linux 2.2 epoch scheduler; modified proc table, ready queue logic, and randomness utilities.</p>
+          <p>Implemented starvation-free exponential scheduler and Linux 2.2 epoch scheduler; modified proc table, ready queue logic, and randomness utilities.</p>
           <div class="tags"><span class="tag">Scheduling</span><span class="tag">OS</span></div>
         </div></div></div>
 
         <!-- Design & Verification Projects -->
         <div class="card col6"><div class="item"><span class="dot"></span><div>
           <h4>LC3 Microprocessor Verification (UVMF) <span class="meta">· SystemVerilog</span></h4>
-          <p>Developed UVMF‑based testbench including agents, monitors, scoreboards, and functional coverage models.</p>
+          <p>Developed UVMF-based testbench including agents, monitors, scoreboards, and functional coverage models.</p>
           <div class="tags"><span class="tag">UVM</span><span class="tag">SystemVerilog</span></div>
         </div></div></div>
 
         <div class="card col6"><div class="item"><span class="dot"></span><div>
-          <h4>I²C Multi‑Bus Controller Verification <span class="meta">· SystemVerilog</span></h4>
-          <p>Built layered testbench with drivers, predictors, protocol checks, and random/directed tests to validate multi‑bus controller behavior.</p>
+          <h4>I²C Multi-Bus Controller Verification <span class="meta">· SystemVerilog</span></h4>
+          <p>Built layered testbench with drivers, predictors, protocol checks, and random/directed tests to validate multi-bus controller behavior.</p>
           <div class="tags"><span class="tag">I2C</span><span class="tag">Verification</span></div>
         </div></div></div>
 
         <div class="card col6"><div class="item"><span class="dot"></span><div>
-          <h4>Scaled Dot‑Product Self‑Attention Hardware <span class="meta">· Verilog</span></h4>
+          <h4>Scaled Dot-Product Self-Attention Hardware <span class="meta">· Verilog</span></h4>
           <p>Implemented Q/K/V matmul datapaths for Transformer attention; synthesized to ~9k area, 2752 cycles at 11.2 ns period.</p>
           <div class="tags"><span class="tag">Transformers</span><span class="tag">Digital Design</span></div>
         </div></div></div>
 
         <div class="card col6"><div class="item"><span class="dot"></span><div>
-          <h4>DDR‑SDRAM with Burst & ECC <span class="meta">· Verilog</span></h4>
+          <h4>DDR-SDRAM with Burst & ECC <span class="meta">· Verilog</span></h4>
           <p>Designed DDR command sequencing FSM, burst support (4/8/16), and ECC datapath for SED/DED; validated timing and protocol correctness in ModelSim.</p>
           <div class="tags"><span class="tag">DDR</span><span class="tag">ECC</span></div>
         </div></div></div>
 
-              <div class="card col6"><div class="item"><span class="dot"></span><div>
+        <div class="card col6"><div class="item"><span class="dot"></span><div>
           <h4>Unix File System Defragmenter <span class="meta">· C</span></h4>
-          <p>Developing a C‑based Unix file system defragmenter that reorganizes inode and data‑block layouts for contiguous on‑disk storage and improved performance. Implementing low‑level binary I/O handling and pointer‑block reconstruction (direct, single, double, and triple indirect) to ensure correctness and bit‑level consistency with reference disk images.</p>
+          <p>Developing a C-based Unix file system defragmenter that reorganizes inode and data-block layouts for contiguous on-disk storage and improved performance. Implementing low-level binary I/O handling and pointer-block reconstruction (direct, single, double, and triple indirect) to ensure correctness and bit-level consistency with reference disk images.</p>
           <div class="tags"><span class="tag">Filesystems</span><span class="tag">C</span></div>
         </div></div></div>
 
       </div>
     </section>
-    <!-- ONGOING RESEARCH -->
+
+    <!-- RESEARCH PROJECTS (COMPLETED) -->
     <section id="research" style="margin-top:40px">
-      <h3>Ongoing Research</h3>
+      <h3>Research Projects (Completed)</h3>
       <div class="grid">
 
         <div class="card row"><div class="item"><span class="dot"></span><div>
-          <h4>Microarchitectural Characterization of SMT Contention Channels under AI Workloads <span class="meta">· Nov 2025 – Present</span></h4>
-          <p>Working on how CNN, RNN, and Transformer inference workloads running as SMT siblings produce distinct contention signatures across BTB, PHT, ROB, register file, TLB, caches, and prefetchers. Running targeted microbenchmarks and collecting timing, perf-counter, and core-frequency traces to quantify separability and evaluate how dynamic frequency scaling (TurboBoost) interacts with leakage.</p>
+          <h4>Microarchitectural Characterization of SMT Contention Channels under AI Workloads
+            <span class="meta">· Nov 2025 – Feb 2026 · Completed</span>
+          </h4>
+          <p>Characterized how CNN, RNN, and Transformer inference workloads running as SMT siblings produce distinct contention signatures across BTB, PHT, ROB, register file, TLB, caches, and hardware prefetchers. Designed targeted microbenchmarks and collected timing, performance-counter, and core-frequency traces to quantify workload separability. Evaluated the interaction between dynamic frequency scaling (TurboBoost) and microarchitectural leakage.</p>
         </div></div></div>
 
         <div class="card row"><div class="item"><span class="dot"></span><div>
-          <h4>Operating Systems Research <span class="meta">· Oct 2025 – Present</span></h4>
-          <p>Building low-level Linux memory profiling tools using BCC/eBPF to trace page faults, virtual-to-physical address translation, and PFN allocation behavior. Running controlled workloads inside QEMU VMs to study page table dynamics, contiguous vs non-contiguous PFN patterns, ASLR effects, and huge page allocation. Constructing reproducible workflows by pausing VMs, dumping physical memory, and correlating dumps with traced kernel events.</p>
+          <h4>Linux Memory Management & Page Allocation Analysis
+            <span class="meta">· Oct 2025 – Jan 2026 · Completed</span>
+          </h4>
+          <p>Developed low-level Linux memory profiling tools using BCC/eBPF to trace page faults, virtual-to-physical address translation, and PFN allocation behavior. Conducted controlled experiments inside QEMU VMs to study page table dynamics, contiguous versus non-contiguous PFN patterns, ASLR effects, and huge page allocation. Built reproducible workflows by pausing VMs, dumping physical memory, and correlating memory dumps with traced kernel events.</p>
         </div></div></div>
-
-              
 
       </div>
     </section>
@@ -175,21 +182,21 @@
 
         <div class="card row"><div class="item"><span class="dot"></span><div>
           <h4>SoC Design Intern — Western Semiconductor <span class="meta">· Tempe, AZ · May–Aug 2025</span></h4>
-<ul>
-<li>Worked on the design and integration of a RISC-V compliant Vector Processing Unit (VPU) with a multi-lane vector register file, based on RVV 1.0 specifications.</li>
-<li>Developed Verilog RTL for a vector register file, lane sequencer, and writeback stage in a custom vector processor, optimizing parallel lane access, memory banking, and high-throughput data transfers.</li>
-<li>Implemented assertions to verify functional correctness and detect bugs early in the design phase.</li>
-<li>Developed a comprehensive C++ simulation testbench for a custom vector register file (VRF) with dual-read and conflict detection logic, generating VCD waveforms for RTL verification.</li>
-</ul>
+          <ul>
+            <li>Worked on the design and integration of a RISC-V compliant Vector Processing Unit (VPU) with a multi-lane vector register file, based on RVV 1.0 specifications.</li>
+            <li>Developed Verilog RTL for a vector register file, lane sequencer, and writeback stage in a custom vector processor, optimizing parallel lane access, memory banking, and high-throughput data transfers.</li>
+            <li>Implemented assertions to verify functional correctness and detect bugs early in the design phase.</li>
+            <li>Developed a comprehensive C++ simulation testbench for a custom vector register file (VRF) with dual-read and conflict detection logic, generating VCD waveforms for RTL verification.</li>
+          </ul>
         </div></div></div>
 
         <div class="card row"><div class="item"><span class="dot"></span><div>
           <h4>Research Intern — ISRO <span class="meta">· Ahmedabad, IN · Dec 2023–May 2024</span></h4>
-<ul>
-<li>Implemented a Moving Average FIR filter in Verilog to reduce spatial noise in photodetector images, using external SRAM for pixel buffering and memory‑mapped FPGA interfacing; synthesized in Libero IDE 9.1 at 50 MHz.</li>
-<li>Executed functional validation of FIR filter on ProASIC3 FPGA using randomized and corner‑case test vectors; correlated output against MATLAB golden model within ±1 LSB.</li>
-<li>Validated timing correctness by correlating simulation and FPGA hardware results; achieved 98% functional coverage using coverage‑driven analysis.</li>
-</ul>
+          <ul>
+            <li>Implemented a Moving Average FIR filter in Verilog to reduce spatial noise in photodetector images, using external SRAM for pixel buffering and memory-mapped FPGA interfacing; synthesized in Libero IDE 9.1 at 50 MHz.</li>
+            <li>Executed functional validation of FIR filter on ProASIC3 FPGA using randomized and corner-case test vectors; correlated output against MATLAB golden model within ±1 LSB.</li>
+            <li>Validated timing correctness by correlating simulation and FPGA hardware results; achieved 98% functional coverage using coverage-driven analysis.</li>
+          </ul>
         </div></div></div>
 
       </div>
@@ -200,7 +207,7 @@
       <h3>Skills</h3>
       <div class="grid">
         <div class="card col4"><h4>Languages</h4><p>C, C++, Python, Rust, SystemVerilog, Verilog</p></div>
-        <div class="card col4"><h4>Tools</h4><p>CUDA, OpenCL, Docker, Vivado, GPGPU‑Sim, ModelSim</p></div>
+        <div class="card col4"><h4>Tools</h4><p>CUDA, OpenCL, Docker, Vivado, GPGPU-Sim, ModelSim</p></div>
         <div class="card col4"><h4>Protocols</h4><p>I²C, SPI, UART, CAN</p></div>
       </div>
     </section>
@@ -212,9 +219,18 @@
   const saved=localStorage.getItem('theme');
   if(saved==='light') root.classList.add('light');
   const btn=document.getElementById('theme');
-  function updateIcon(){ btn.textContent=root.classList.contains('light')?'🌙':'☀️'; }
+
+  function updateIcon(){
+    // icon indicates action: switch to dark => 🌙, switch to light => ☀️
+    btn.textContent = root.classList.contains('light') ? '🌙' : '☀️';
+  }
   updateIcon();
-  btn.onclick=()=>{ root.classList.toggle('light'); localStorage.setItem('theme',root.classList.contains('light')?'light':'dark'); updateIcon(); };
+
+  btn.onclick=()=>{
+    root.classList.toggle('light');
+    localStorage.setItem('theme',root.classList.contains('light')?'light':'dark');
+    updateIcon();
+  };
 </script>
 </body>
 </html>
